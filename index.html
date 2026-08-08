@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nova — персональное портфолио начинающего разработчика Алекса. Навыки, проекты и контакты.">
+    <meta name="keywords" content="портфолио, разработчик, frontend, веб-разработка, Nova">
+    <meta name="author" content="Alex">
+    <meta name="theme-color" content="#0b0d17">
+    <title>Nova — Портфолио разработчика</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2300d4ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' font-family='Arial' font-size='18' font-weight='700' fill='white' dominant-baseline='middle'%3EN%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader">
+    <div class="preloader__ring"></div>
+</div>
+
+<!-- Header -->
+<header class="header" id="header">
+    <div class="container header__inner">
+        <a href="#home" class="logo" aria-label="Nova — на главную">
+            <span class="logo__mark" aria-hidden="true">
+                <svg viewBox="0 0 32 32" width="32" height="32">
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0" stop-color="#7c5cff"/>
+                            <stop offset="1" stop-color="#00d4ff"/>
+                        </linearGradient>
+                    </defs>
+                    <rect width="32" height="32" rx="9" fill="url(#logoGrad)"/>
+                    <path d="M9 22V10h2l6 8V10h2v12h-2l-6-8v8H9z" fill="#0b0d17"/>
+                </svg>
+            </span>
+            <span class="logo__text">Nova</span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Основная навигация">
+            <ul class="nav__list">
+                <li><a href="#home" class="nav__link">Главная</a></li>
+                <li><a href="#about" class="nav__link">Обо мне</a></li>
+                <li><a href="#skills" class="nav__link">Навыки</a></li>
+                <li><a href="#projects" class="nav__link">Проекты</a></li>
+                <li><a href="#contact" class="nav__link">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему" title="Переключить тему">
+            <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<main>
+
+<!-- Hero -->
+<section class="hero" id="home">
+    <div class="hero__bg" aria-hidden="true">
+        <div class="hero__blob hero__blob--1"></div>
+        <div class="hero__blob hero__blob--2"></div>
+        <div class="hero__grid"></div>
+    </div>
+    <div class="container hero__inner">
+        <div class="hero__content reveal">
+            <span class="chip">
+                <span class="chip__dot"></span>
+                Открыт к проектам
+            </span>
+            <h1 class="hero__title">
+                Привет, я <span class="grad-text">Алекс</span> — <br>
+                начинающий разработчик
+            </h1>
+            <p class="hero__lead">
+                Создаю быстрые и аккуратные интерфейсы на HTML, CSS и JavaScript.
+                Учусь каждый день и превращаю идеи в работающие продукты.
+            </p>
+            <div class="hero__actions">
+                <a href="#projects" class="btn btn--primary">Посмотреть проекты</a>
+                <a href="#contact" class="btn btn--ghost">Связаться со мной</a>
+            </div>
+            <ul class="hero__stats" aria-label="Статистика">
+                <li><strong data-counter="12">0</strong><span>проектов</span></li>
+                <li><strong data-counter="2">0</strong><span>года опыта</span></li>
+                <li><strong data-counter="30">0</strong><span>довольных клиентов</span></li>
+            </ul>
+        </div>
+
+        <div class="hero__visual reveal" aria-hidden="true">
+            <div class="code-card">
+                <div class="code-card__bar">
+                    <span></span><span></span><span></span>
+                    <em>developer.js</em>
+                </div>
+                <pre class="code-card__body"><code><span class="tk-c">// добро пожаловать</span>
+<span class="tk-k">const</span> <span class="tk-v">alex</span> = {
+  <span class="tk-p">name</span>: <span class="tk-s">'Alex'</span>,
+  <span class="tk-p">role</span>: <span class="tk-s">'Frontend Dev'</span>,
+  <span class="tk-p">stack</span>: [<span class="tk-s">'HTML'</span>, <span class="tk-s">'CSS'</span>, <span class="tk-s">'JS'</span>],
+  <span class="tk-p">learning</span>: <span class="tk-b">true</span>,
+  <span class="tk-p">build</span>() {
+    <span class="tk-k">return</span> <span class="tk-s">'что-то классное ✦'</span>;
+  }
+};</code></pre>
+            </div>
+            <div class="orbit" aria-hidden="true">
+                <div class="orbit__ring"></div>
+                <div class="orbit__ring orbit__ring--2"></div>
+                <div class="orbit__dot"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section class="section" id="about">
+    <div class="container">
+        <header class="section__head reveal">
+            <span class="section__kicker">01 — О себе</span>
+            <h2 class="section__title">Обо мне</h2>
+            <p class="section__lead">Немного о том, кто я и чем занимаюсь.</p>
+        </header>
+
+        <div class="about">
+            <div class="about__media reveal">
+                <div class="about__photo">
+                    <img src="https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?auto=format&fit=crop&w=800&q=80" alt="Портрет разработчика за ноутбуком" loading="lazy">
+                    <div class="about__badge">
+                        <span class="grad-text">2+</span>
+                        <small>года в разработке</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about__content reveal">
+                <p>
+                    Меня зовут Алекс. Я увлечён веб-разработкой и создаю аккуратные
+                    цифровые интерфейсы — от лендингов до небольших приложений.
+                    Верю, что хороший продукт — это внимание к деталям и забота о пользователе.
+                </p>
+                <p>
+                    Постоянно учусь: изучаю новые технологии, читаю статьи,
+                    смотрю доклады, разбираю чужой код и делаю собственные пет-проекты.
+                </p>
+
+                <ul class="about__facts">
+                    <li>
+                        <span class="about__facts-icon" aria-hidden="true">✦</span>
+                        <div><strong>Опыт</strong><span>2+ года практики</span></div>
+                    </li>
+                    <li>
+                        <span class="about__facts-icon" aria-hidden="true">◆</span>
+                        <div><strong>Направление</strong><span>Frontend-разработка</span></div>
+                    </li>
+                    <li>
+                        <span class="about__facts-icon" aria-hidden="true">✱</span>
+                        <div><strong>Интересы</strong><span>UI/UX, анимации, чистый код</span></div>
+                    </li>
+                    <li>
+                        <span class="about__facts-icon" aria-hidden="true">➤</span>
+                        <div><strong>Цель</strong><span>Стать сильным Frontend-инженером</span></div>
+                    </li>
+                </ul>
+
+                <a href="#contact" class="btn btn--primary">Связаться</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills -->
+<section class="section section--alt" id="skills">
+    <div class="container">
+        <header class="section__head reveal">
+            <span class="section__kicker">02 — Стек</span>
+            <h2 class="section__title">Навыки</h2>
+            <p class="section__lead">Инструменты, с которыми я работаю каждый день.</p>
+        </header>
+
+        <div class="skills">
+            <article class="skill-card reveal">
+                <div class="skill-card__head">
+                    <span class="skill-card__icon" style="--c1:#e34f26;--c2:#f06529;">&lt;/&gt;</span>
+                    <div>
+                        <h3>HTML</h3>
+                        <p>Семантическая, доступная и валидная разметка.</p>
+                    </div>
+                </div>
+                <div class="progress" role="progressbar" aria-label="HTML" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress__bar" data-value="95"></div>
+                    <span class="progress__label">95%</span>
+                </div>
+            </article>
+
+            <article class="skill-card reveal">
+                <div class="skill-card__head">
+                    <span class="skill-card__icon" style="--c1:#2965f1;--c2:#00d4ff;">#</span>
+                    <div>
+                        <h3>CSS</h3>
+                        <p>Адаптивная вёрстка, Flexbox, Grid, анимации.</p>
+                    </div>
+                </div>
+                <div class="progress" role="progressbar" aria-label="CSS" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress__bar" data-value="90"></div>
+                    <span class="progress__label">90%</span>
+                </div>
+            </article>
+
+            <article class="skill-card reveal">
+                <div class="skill-card__head">
+                    <span class="skill-card__icon" style="--c1:#f7df1e;--c2:#f0b90b;color:#0b0d17;">JS</span>
+                    <div>
+                        <h3>JavaScript</h3>
+                        <p>ES6+, DOM, работа с API и интерактивность.</p>
+                    </div>
+                </div>
+                <div class="progress" role="progressbar" aria-label="JavaScript" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress__bar" data-value="80"></div>
+                    <span class="progress__label">80%</span>
+                </div>
+            </article>
+
+            <article class="skill-card reveal">
+                <div class="skill-card__head">
+                    <span class="skill-card__icon" style="--c1:#7c5cff;--c2:#c084fc;">✦</span>
+                    <div>
+                        <h3>UI / UX</h3>
+                        <p>Основы дизайна интерфейсов и пользовательского опыта.</p>
+                    </div>
+                </div>
+                <div class="progress" role="progressbar" aria-label="UI/UX" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress__bar" data-value="70"></div>
+                    <span class="progress__label">70%</span>
+                </div>
+            </article>
+
+            <article class="skill-card reveal">
+                <div class="skill-card__head">
+                    <span class="skill-card__icon" style="--c1:#f05033;--c2:#f37066;">⎇</span>
+                    <div>
+                        <h3>Git</h3>
+                        <p>Контроль версий, ветвление, работа в команде.</p>
+                    </div>
+                </div>
+                <div class="progress" role="progressbar" aria-label="Git" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress__bar" data-value="75"></div>
+                    <span class="progress__label">75%</span>
+                </div>
+            </article>
+
+            <article class="skill-card reveal">
+                <div class="skill-card__head">
+                    <span class="skill-card__icon" style="--c1:#f24e1e;--c2:#a259ff;">◆</span>
+                    <div>
+                        <h3>Figma</h3>
+                        <p>Работа с макетами, компонентами и прототипами.</p>
+                    </div>
+                </div>
+                <div class="progress" role="progressbar" aria-label="Figma" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress__bar" data-value="65"></div>
+                    <span class="progress__label">65%</span>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section class="section" id="projects">
+    <div class="container">
+        <header class="section__head reveal">
+            <span class="section__kicker">03 — Работы</span>
+            <h2 class="section__title">Проекты</h2>
+            <p class="section__lead">Несколько работ, которыми я горжусь.</p>
+        </header>
+
+        <div class="filters reveal" role="tablist" aria-label="Фильтр проектов">
+            <button class="filter is-active" data-filter="all">Все</button>
+            <button class="filter" data-filter="web">Веб</button>
+            <button class="filter" data-filter="app">Приложения</button>
+            <button class="filter" data-filter="dashboard">Дашборды</button>
+        </div>
+
+        <div class="projects">
+            <article class="project reveal" data-category="web" data-project="shop">
+                <div class="project__media">
+                    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=900&q=80" alt="Скриншот интернет-магазина" loading="lazy">
+                    <span class="project__tag">Веб</span>
+                </div>
+                <div class="project__body">
+                    <h3>Интернет-магазин</h3>
+                    <p>Каталог товаров с корзиной, фильтрами и адаптивной вёрсткой.</p>
+                    <ul class="project__stack">
+                        <li>HTML</li><li>CSS</li><li>JavaScript</li>
+                    </ul>
+                    <button class="btn btn--primary btn--sm" data-open="shop">Подробнее</button>
+                </div>
+            </article>
+
+            <article class="project reveal" data-category="app" data-project="weather">
+                <div class="project__media">
+                    <img src="https://images.unsplash.com/photo-1601134467661-3d775b999c8b?auto=format&fit=crop&w=900&q=80" alt="Скриншот приложения погоды" loading="lazy">
+                    <span class="project__tag">Приложение</span>
+                </div>
+                <div class="project__body">
+                    <h3>Приложение погоды</h3>
+                    <p>Актуальный прогноз по городу с поиском и удобным интерфейсом.</p>
+                    <ul class="project__stack">
+                        <li>JS</li><li>API</li><li>CSS</li>
+                    </ul>
+                    <button class="btn btn--primary btn--sm" data-open="weather">Подробнее</button>
+                </div>
+            </article>
+
+            <article class="project reveal" data-category="dashboard" data-project="dashboard">
+                <div class="project__media">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" alt="Скриншот панели управления" loading="lazy">
+                    <span class="project__tag">Дашборд</span>
+                </div>
+                <div class="project__body">
+                    <h3>Панель управления</h3>
+                    <p>Аналитический дашборд с графиками, таблицами и тёмной темой.</p>
+                    <ul class="project__stack">
+                        <li>HTML</li><li>CSS</li><li>Chart.js</li>
+                    </ul>
+                    <button class="btn btn--primary btn--sm" data-open="dashboard">Подробнее</button>
+                </div>
+            </article>
+
+            <article class="project reveal" data-category="web" data-project="landing">
+                <div class="project__media">
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=900&q=80" alt="Скриншот лендинга" loading="lazy">
+                    <span class="project__tag">Веб</span>
+                </div>
+                <div class="project__body">
+                    <h3>Лендинг стартапа</h3>
+                    <p>Одностраничный сайт с анимациями появления и формой заявки.</p>
+                    <ul class="project__stack">
+                        <li>HTML</li><li>SCSS</li><li>JS</li>
+                    </ul>
+                    <button class="btn btn--primary btn--sm" data-open="landing">Подробнее</button>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="section section--alt" id="contact">
+    <div class="container">
+        <header class="section__head reveal">
+            <span class="section__kicker">04 — Связь</span>
+            <h2 class="section__title">Контакты</h2>
+            <p class="section__lead">Есть идея или задача? Напишите — буду рад обсудить.</p>
+        </header>
+
+        <div class="contact">
+            <div class="contact__info reveal">
+                <h3>Давайте сделаем что-то классное</h3>
+                <p>Открыт к стажировкам, фрилансу и командной работе. Отвечаю обычно в течение дня.</p>
+
+                <ul class="contact__list">
+                    <li>
+                        <span class="contact__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M22 6l-10 7L2 6"/></svg>
+                        </span>
+                        <div><small>Email</small><a href="mailto:hello@nova.dev">hello@nova.dev</a></div>
+                    </li>
+                    <li>
+                        <span class="contact__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 4.5L2.5 12l6 2 2 6 3-4 6 5z"/></svg>
+                        </span>
+                        <div><small>Telegram</small><a href="https://t.me/nova_dev" target="_blank" rel="noopener">@nova_dev</a></div>
+                    </li>
+                    <li>
+                        <span class="contact__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2 1-.3 2-.4 3-.4s2 .1 3 .4c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+                        </span>
+                        <div><small>GitHub</small><a href="https://github.com" target="_blank" rel="noopener">github.com/alex</a></div>
+                    </li>
+                </ul>
+
+                <div class="socials">
+                    <a href="https://t.me/nova_dev" class="social" aria-label="Telegram" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 4.5L2.5 12l6 2 2 6 3-4 6 5z"/></svg>
+                    </a>
+                    <a href="https://github.com" class="social" aria-label="GitHub" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2 1-.3 2-.4 3-.4s2 .1 3 .4c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+                    </a>
+                    <a href="mailto:hello@nova.dev" class="social" aria-label="Email">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M22 6l-10 7L2 6"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <form class="contact__form reveal" id="contactForm" novalidate>
+                <div class="field">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" name="name" placeholder="Как к вам обращаться?" required minlength="2">
+                    <span class="field__error" data-error-for="name"></span>
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    <span class="field__error" data-error-for="email"></span>
+                </div>
+                <div class="field">
+                    <label for="message">Сообщение</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Расскажите о задаче…" required minlength="10"></textarea>
+                    <span class="field__error" data-error-for="message"></span>
+                </div>
+                <button type="submit" class="btn btn--primary btn--block">Отправить</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container footer__inner">
+        <div class="footer__brand">
+            <a href="#home" class="logo">
+                <span class="logo__mark" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" width="28" height="28">
+                        <rect width="32" height="32" rx="9" fill="url(#logoGrad)"/>
+                        <path d="M9 22V10h2l6 8V10h2v12h-2l-6-8v8H9z" fill="#0b0d17"/>
+                    </svg>
+                </span>
+                <span class="logo__text">Nova</span>
+            </a>
+            <p>Персональное портфолио — сделано с любовью к деталям.</p>
+        </div>
+
+        <nav class="footer__nav" aria-label="Разделы">
+            <h4>Разделы</h4>
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer__social">
+            <h4>Соцсети</h4>
+            <div class="socials">
+                <a href="https://t.me/nova_dev" class="social" aria-label="Telegram" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 4.5L2.5 12l6 2 2 6 3-4 6 5z"/></svg>
+                </a>
+                <a href="https://github.com" class="social" aria-label="GitHub" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2 1-.3 2-.4 3-.4s2 .1 3 .4c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+                </a>
+                <a href="mailto:hello@nova.dev" class="social" aria-label="Email">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M22 6l-10 7L2 6"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container footer__bottom">
+        <small>© <span id="year">2025</span> Nova. Все права защищены.</small>
+        <small>Сделано на HTML · CSS · JavaScript</small>
+    </div>
+</footer>
+
+<!-- Back to top -->
+<button class="to-top" id="toTop" aria-label="Наверх">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<!-- Toast -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- Modal -->
+<div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__card">
+        <button class="modal__close" data-close aria-label="Закрыть">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+        <div class="modal__media">
+            <img id="modalImage" src="" alt="">
+        </div>
+        <div class="modal__body">
+            <span class="chip" id="modalTag">Проект</span>
+            <h3 id="modalTitle">Название</h3>
+            <p id="modalDesc"></p>
+            <div class="modal__meta">
+                <div><small>Стек</small><span id="modalStack"></span></div>
+                <div><small>Год</small><span id="modalYear"></span></div>
+                <div><small>Роль</small><span id="modalRole"></span></div>
+            </div>
+            <div class="modal__actions">
+                <a href="#" class="btn btn--primary" id="modalLink" target="_blank" rel="noopener">Открыть демо</a>
+                <button class="btn btn--ghost" data-close>Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
